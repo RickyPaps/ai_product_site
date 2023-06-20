@@ -56,7 +56,7 @@ const Customizer = () => {
     try {
       setGeneratingImg(true);
 
-      const res = await fetch(`http://localhost:8080/api/v1/dalle`, {
+      const res = await fetch(`https://ai-product-site.onrender.com/api/v1/dalle`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
