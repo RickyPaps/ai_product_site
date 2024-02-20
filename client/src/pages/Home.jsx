@@ -18,12 +18,21 @@ const Home = () => {
     <AnimatePresence>
       {snap.intro && (
         <motion.section className="home" {...slideAnimation("left")}>
-          <motion.header {...slideAnimation("down")}>
+          <motion.header {...slideAnimation("down")} className="flex space-x-2">
             <img
               src="./threejs.png"
               alt="logo"
               className="w-8 h-8 object-contain"
             />
+            <button
+              type="button"
+              onClick={() =>
+                window.open("https://github.com/RickyPaps/ai_product_site")
+              }
+              className="black_btn"
+            >
+              Github
+            </button>
           </motion.header>
           <motion.div className="home-content" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
